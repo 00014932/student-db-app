@@ -18,7 +18,7 @@ $("#updateStudent").submit(function (event) {
   console.log(data);
 
   var req = {
-    "url": `http://localhost:8000/api/students/${data.id}`,
+    "url": `/api/students/${data.id}`,
     "method": "PUT",
     "data": data,
   };
@@ -38,7 +38,7 @@ if (window.location.pathname == "/") {
     var id = $(this).attr("data-id");
 
     var request = {
-      url: `http://localhost:8000/api/students/${id}`,
+      url: `/api/students/${id}`,
       method: "DELETE",
     };
 
