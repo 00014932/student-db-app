@@ -1,0 +1,47 @@
+<%- include('templates/theHeader') %>
+<section>
+  <div class="wrapper">
+    <div class="headings">
+      <h1 class="list-heading">Students List</h1>
+      <div class="buttins">
+        <button class="btn btn-add">
+          <a href="/">Reload Page 🔁</a>
+        </button>
+        <button class="btn btn-add">
+          <a href="/createStudent">Add Student ➕</a>
+        </button>
+      </div>
+    </div>
+
+    <% for(let a = 0; a < students.length; a++){ %>
+    <div class="student">
+      <div class="student-info">
+        <h2 class="student-name">
+          <%= a+1 %>.<strong><%= students[a].name %></strong>
+        </h2>
+        <span class="student-id"
+          >Student ID: <strong><%= students[a].studentId %></strong></span
+        >
+        <span class="level"
+          >Level of study: <strong><%= students[a].level %></strong></span
+        >
+        <span class="scholarship"
+          >Scholarship: <strong><%= students[a].scholarship %></strong></span
+        >
+        <span class="student-email"
+          >Email: <strong><%= students[a].email %></strong></span
+        >
+      </div>
+      <div class="student-actions">
+        <button class="update-button btn">
+          <a href="/updateStudent/?id=<%= students[a]._id%>">Update</a>
+        </button>
+        <button class="delete-button btn">
+          <a data-id="<%= students[a]._id %>" class="delete">Delete</a>
+        </button>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>
+<%- include('templates/theFooter') %>

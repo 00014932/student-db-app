@@ -1,0 +1,44 @@
+<%- include('templates/theHeader') %>
+<div class="wrapper">
+  <button class="btn btn-back">
+    <a href="/">🔙 Back to Main</a>
+  </button>
+  <form method="POST" id="updateStudent">
+    <h1 class="list-heading">Update student</h1>
+    <span>You can update this student.</span>
+    <div class="form-line">
+      <label for="name">Name</label>
+      <input type="hidden" name="id" value="<%= student._id %>" />
+      <input type="text" name="name" value="<%= student.name %>" />
+    </div>
+
+    <div class="form-line">
+      <label for="name">Student ID</label>
+      <input type="text" name="studentId" value="<%= student.studentId %>" />
+    </div>
+    <div class="form-line">
+      <label for="email">E-mail</label>
+      <input type="text" name="email" value="<%= student.email %>" />
+    </div>
+    <div class="form-line">
+      <label for="level">Level</label>
+      <select name="level" value="<%= student.level %>">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="form-line">
+      <label for="scholarship" value="<%= student.scholarship %>"
+        >Scholarship</label
+      >
+      <select name="scholarship" value="">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <button class="btn-submit">Add</button>
+  </form>
+</div>
+<%- include('templates/theFooter') %>
