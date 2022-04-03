@@ -33,7 +33,7 @@ npm start
 - **Nodemon** : 2.0.15
 
 ## Project Structure.
-
+`
 /application
 	app.js
 	/node-modules
@@ -55,5 +55,5 @@ npm start
     index.ejs		
     createStudent.ejs
 		updateStudent.ejs
-
+`
 This structure was applied due to its convenience in locating various parts of the project. The server folder here contains all the code that is responsible for building the server side of the application. All the files contain the corresponding to its title code.
