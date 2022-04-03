@@ -37,7 +37,7 @@ npm start
 - /application
 	- app.js
 	- /node-modules
-  	-/assets
+  	- /assets
 	 	- /css
 		 	- style.css
   		- /js
